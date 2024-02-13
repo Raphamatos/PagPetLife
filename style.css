@@ -22,10 +22,11 @@ header nav a {
   font-weight: bolder;
   padding: 1rem;
 }
-header img{
+header img {
+  margin-left: 2rem;
   max-width: 100%;
 }
-img{
+img {
   max-width: 45%;
 }
 #inicio {
@@ -35,21 +36,22 @@ img{
   padding: 1.5rem 5rem 8rem 5rem;
   position: relative;
 }
-#clinica, #duvida {
+#clinica,
+#duvida {
   display: flex;
   align-items: center;
   gap: 4rem;
   padding: 4rem 5rem;
 }
 
-#farmacia{
+#farmacia {
   padding: 4rem 5rem;
   text-align: center;
 }
-#farmacia img{
+#farmacia img {
   margin: 0.5em auto;
 }
-#farmacia p{
+#farmacia p {
   max-width: 90%;
   margin: 0 auto;
 }
@@ -62,9 +64,14 @@ img{
 }
 h1,
 h2 {
-  font-weight: 600;
+  text-align: center;
+  font-weight: 700;
   font-size: 2em;
   margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 .p {
@@ -102,26 +109,26 @@ h2 {
 #clinica li {
   margin: 1em 0 0 2em;
 }
-#size{
+#size {
   width: 450px;
 }
-.duvida{
+.duvida {
   position: relative;
 }
 
-.duvida h3{
+.duvida h3 {
   padding: 1.5rem;
   border: 3px solid #ff725e;
   border-radius: 0.4rem;
   cursor: pointer;
 }
-.duvida img{
+.duvida img {
   position: absolute;
   top: 2rem;
   right: 1.5rem;
 }
 
-.duvida .p{
+.duvida .p {
   border-right: 1px solid #ff9a6c;
   border-bottom: 1px solid #ff9a6c;
   border-left: 1px solid #ff9a6c;
@@ -131,58 +138,131 @@ h2 {
   opacity: 0;
   height: 0;
   overflow: hidden;
-  transition: 0.9s ;
+  transition: 0.9s;
 }
-.duvida.ativa .p{
+.duvida.ativa .p {
   height: fit-content;
   opacity: 1;
   padding: 1.5rem;
-
 }
 
-footer{
+footer {
+  justify-content: center;
   background-color: #ff9b6c5c;
   display: flex;
   gap: 5rem;
   padding: 4rem 5rem;
 }
 
-.footer img, footer .title{
+.footer img,
+footer .title {
   font-weight: bolder;
   margin-bottom: 1.5rem;
   display: block;
 }
 
-footer nav a{
+footer nav a {
   color: #263138;
   display: block;
   margin-bottom: 1rem;
 }
 
-footer p{
+footer p {
   margin-bottom: 1rem;
 }
-footer p a{
+footer p a {
   color: #ff725e;
 }
 
-footer>:first-child{
+footer > :first-child {
   width: 40%;
 }
-footer>:first-child p{
+footer > :first-child p {
   margin-top: 1rem;
 }
 
-#copyright{
+#copyright {
   background-color: #ff725e;
   color: #fff;
   padding: 1.5rem;
   text-align: center;
 }
-#copyright  a{
+#copyright a {
   color: #fff;
   font-weight: bolder;
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  #inicio,
+  #clinica,
+  #duvida,
+  #farmacia {
+    flex-direction: column;
+    padding: 2.4rem 4rem;
+  }
+  img#size,
+  #inicio img,
+  #clinica img,
+  #farmacia img {
+    margin: 0;
+  }
+  .absolute {
+    bottom: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #inicio,
+  #clinica,
+  #duvida,
+  #farmacia,
+  footer {
+    padding: 1rem 2.5rem;
+  }
+  .absolute {
+    bottom: 0.88rem;
+    width: 100%;
+  }
+  h3 {
+    font-size: small;
+  }
+  .duvida img {
+    top: 1.5rem;
+    right: 0.88rem;
+  }
+  img#size,
+  #inicio img:nth-child,
+  #clinica img,
+  #farmacia img {
+    max-width: 70%;
+  }
+  footer img {
+    width: 50%;
+  }
+  footer {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer > :first-child {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  footer div:nth-child(n+2){
+    width: 100%;
+  border: 3px dotted #ff9a6c;
+  }
+
+  footer strong, footer p, footer nav a {
+    margin: 0 0 1rem;
+  }
+  footer strong{
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 400px){
+  
+}
 
