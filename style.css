@@ -10,22 +10,63 @@
 body {
   color: #263138;
 }
+.checkbtn {
+  font-size: 30px;
+}
+
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
+
   background-color: #ff9a6c;
 }
-header nav a {
-  color: #fff;
-  font-weight: bolder;
-  padding: 1rem;
+
+header nav {
+  background-color: #ff9a6c;
+  height: 4rem;
+  width: 100%;
 }
-header img {
-  margin-left: 2rem;
-  max-width: 100%;
+strong.logo {
+  color: white;
+  font-size: 2rem;
+  line-height: 4rem;
+  padding: 0 100px;
+  font-weight: 900;
 }
+header nav ul {
+  float: right;
+  margin-right: 20px;
+}
+header nav ul li {
+  display: inline-block;
+  line-height: 4rem;
+}
+
+header nav ul li a {
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+}
+
+header nav a.active,
+header nav a:hover {
+  background-color: #ff725e;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 2rem;
+  color: white;
+  float: right;
+  line-height: 4rem;
+  margin-right: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
 img {
   max-width: 45%;
 }
@@ -210,6 +251,54 @@ footer > :first-child p {
   .absolute {
     bottom: 2rem;
   }
+
+  strong.logo {
+    font-size: 1.9rem;
+    padding-left: 50px;
+  }
+  header nav ul li a {
+    font-size: 1rem;
+  }
+  .checkbtn {
+    display: block;
+  }
+  header ul.link_nav {
+    z-index: 2;
+    position: absolute;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    background-color: #ff725e;
+    right:-1.2rem;
+    top: -100%;
+    transition: all 0.5s;
+    text-align: center;
+  }
+  header nav ul li {
+    
+    display: block;
+  }
+  header nav ul li a {
+    
+    font-size: 1.2rem;
+  }
+  header nav a:hover,
+  header nav a.active {
+    background: none;
+    color: #263138;
+  }
+  .checkbtn {
+    display: block;
+  }
+
+  nav a:hover,
+  nav a.active {
+    background: none;
+    color: #263138;
+  }
+  #check:checked ~ ul {
+    top: 4rem;
+  }
 }
 @media screen and (max-width: 600px) {
   #inicio,
@@ -250,19 +339,38 @@ footer > :first-child p {
     padding: 1rem;
   }
 
-  footer div:nth-child(n+2){
+  footer div:nth-child(n + 2) {
     width: 100%;
-  border: 3px dotted #ff9a6c;
+    border: 3px dotted #ff9a6c;
   }
 
-  footer strong, footer p, footer nav a {
+  footer strong,
+  footer p,
+  footer nav a {
     margin: 0 0 1rem;
   }
-  footer strong{
+  footer strong {
     margin-top: 1rem;
   }
 }
-@media screen and (max-width: 400px){
-  
+@media screen and (max-width: 480px) {
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+  #inicio a.button,
+  a.button-tranparent {
+    padding: 1em;
+    font-size: 0.9em;
+  }
+  img#size,
+  #inicio img:nth-child(1),
+  #clinica img,
+  #farmacia img {
+    max-width: 100%;
+  }
+  .duvida img {
+    top: 1.9rem;
+    right: 0.7rem;
+  }
 }
-
