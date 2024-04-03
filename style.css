@@ -374,3 +374,22 @@ footer > :first-child p {
     right: 0.7rem;
   }
 }
+
+footer#copyRight {
+  position: absolute;
+  bottom: 0;
+  background-color: #fafafa;
+  color: #0e0e0e;
+  font-size: 85%;
+  width: 100%;
+  font-style: none;
+  display: flex;
+  padding: 1rem 10%;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+footer#copyRight a {
+  text-decoration: none;
+  font-weight: bold;
+}
